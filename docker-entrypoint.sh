@@ -12,6 +12,7 @@ sed -i -e "s/root:rootpass, mysqluser:mysqlpassword/root:${MYSQL_ROOT_ENCRYPT_PA
        -e "s/admin-address = 0.0.0.0:2345/admin-address = 0.0.0.0:${ADMIN_PORT:-2345}/g" ${ALTAS_HOME}/conf/test.cnf
 
 [[ $CHARSET ]] && sed -i "s/#charset = utf8/charset = ${CHARSET}/g" ${ALTAS_HOME}/conf/test.cnf
+[[ $LOG_LEVEL ]] && sed -i "s/log-level = message/log-level = ${LOG_LEVEL}/g" ${ALTAS_HOME}/conf/test.cnf
 
 [[ $PAUSE ]] && sleep $PAUSE
 

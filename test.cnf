@@ -18,7 +18,7 @@ proxy-read-only-backend-addresses = 127.0.0.1:3307@1
 pwds = root:rootpass, mysqluser:mysqlpassword
 
 #设置Atlas的运行方式，设为true时为守护进程方式，设为false时为前台方式，一般开发调试时设为false，线上运行时设为true,true后面不能有空格。
-daemon = flase
+daemon = false
 
 #设置Atlas的运行方式，设为true时Atlas会启动两个进程，一个为monitor，一个为worker，monitor在worker意外退出后会自动将其重启，设为false时只有worker，没有monitor，一般开发调试时设为false，线上运行时设为true,true后面不能有空格。
 keepalive = true

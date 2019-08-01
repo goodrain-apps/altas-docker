@@ -5,7 +5,7 @@
 MYSQL_ENCRYPT_PASS=$(${ALTAS_HOME}/bin/encrypt ${MYSQL_PASSWORD})
 MYSQL_ROOT_ENCRYPT_PASS=$(${ALTAS_HOME}/bin/encrypt ${MYSQL_ROOT_PASSWORD})
 
-sed -i -e "s/root:rootpass, mysqluser:mysqlpassword/root:${MYSQL_ROOT_ENCRYPT_PASS}, ${MYSQL_USER}:${MYSQL_ENCRYPT_PASS}/g" \
+sed -i -r -e "s/root:rootpass, mysqluser:mysqlpassword/root:${MYSQL_ROOT_ENCRYPT_PASS}, ${MYSQL_USER}:${MYSQL_ENCRYPT_PASS}/g" \
        -e "s/proxy-address = 0.0.0.0:3308/proxy-address = 0.0.0.0:${PORT:-3308}/g" \
        -e "s/admin-username = user/admin-username = ${ADMIN_USER:-user}/g" \
        -e "s/admin-password = pwd/admin-password = ${ADMIN_PASS:-pwd}/g" \

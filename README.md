@@ -1,7 +1,7 @@
 # altas-docker
 奇虎360开源的mysql-proxy组件 altas
 原项目地址 https://github.com/Qihoo360/Atlas
-这个项目是docker化的实现
+这个项目是docker化的实现，特别为Rainbond部署实现。其中有特殊的逻辑，只适用于Rainbond。如有一般性的使用需求，请自行更改项目中的 docker-entrypoint.sh 脚本。
 
 ### 关于仓库的名字
 啊啊啊啊啊啊啊，我特么的把人家名字拼错了

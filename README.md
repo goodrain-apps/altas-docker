@@ -1,5 +1,7 @@
 # altas-docker
 奇虎360开源的mysql-proxy组件 altas
+原项目地址 https://github.com/Qihoo360/Atlas
+这个项目是docker化的实现
 
 ### 关于仓库的名字
 啊啊啊啊啊啊啊，我特么的把人家名字拼错了
